@@ -1,4 +1,4 @@
-![Docker-Docker Containers.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9f21a14f-ae83-4c7e-a43d-5df99263175b/Docker-Docker_Containers.png)
+![Docker-Docker Containers.png](https://www.google.com/search?q=docker&tbm=isch&ved=2ahUKEwjl_P6q4ff1AhWZlP0HHT_NCAQQ2-cCegQIABAA&oq=docker&gs_lcp=CgNpbWcQAzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BAgAEEM6BAgAEB5Qg0lYg0lg7E1oAHAAeACAAVSIAegBkgEBM5gBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=LWUGYqWyN5mp9u8Pv5qjIA&bih=939&biw=1680&rlz=1C1GCEU_enBG958BG958#imgrc=eJWKdKQbAHJXiM)
 
 **Docker** — технология для создания и управления контейнерами.
 
@@ -32,7 +32,7 @@ CMD ["python", "index.py"]
 
 # Образы и контейнеры (Images & Containers)
 
-![Docker-Containers & Images.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f832d845-c378-48c8-b0f2-72fdea7a31a6/Docker-Containers__Images.png)
+![Docker-Containers & Images.png](https://www.docker.com/sites/default/files/d8/2018-11/docker-containerized-and-vm-transparent-bg.png)
 
 **Containers** - запускаются на основе образов
 
@@ -76,8 +76,6 @@ CMD ["python", "index.py"]
 `docker rm CONTAINER_ID`
 
 # Практика Node приложения
-
-Качаем приложение с Git: [https://github.com/vladilenm/logs-app](https://github.com/vladilenm/logs-app) 
 
 Создаем **Dockerfile** 
 
@@ -222,20 +220,6 @@ VOLUME ["/app/data"] # Добавляем в докер
 
 `docker volume rm VOLUME`
 
-## Монтирование каталога (Bind Mount)
-
-Это нужно для разработки
-
-Если собрать контейнер, то он не меняется, когда мы меняем исходники в редакторе
-
-Добавляем еще один volume
-
-`docker run -p 3000:3000 -d --rm --name logsapp -v logs:/app/data -v /app/node_modules -v "/Users/vladilen/WebstormProjects/express-sample-app:/app" logsapp:volumes`
-
-Или с сокращением
-
-`docker run -p 3000:3000 -d --rm --name logsapp -v logs:/app/data -v /app/node_modules -v $(pwd):/app logsapp:volumes`
-
 ## Команды
 
 `docker volume ls` - список
@@ -248,9 +232,9 @@ VOLUME ["/app/data"] # Добавляем в докер
 
 На локальной машине заливаем образ в Docker Hub:
 
-`docker tag LOCAL_IMG vladilenm/nodeapp`
+`docker tag LOCAL_IMG app`
 
-`docker push vladilenm/nodeapp`
+`docker push app`
 
 Я взял сервер на [vscale.io](http://vscale.io) . Можно использовать любой удобный VPS
 
@@ -264,9 +248,9 @@ pbcopy < ~/.ssh/id_rsa.pub
 
 На VPS
 
-`docker pull vladilenm/nodeapp`
+`docker pull app`
 
-`docker run -d -p 80:3000 --name nodeapp --rm vladilenm/nodeapp`
+`docker run -d -p 80:3000 --name nodeapp --rm app`
 
 Переходим по адресу:
 
