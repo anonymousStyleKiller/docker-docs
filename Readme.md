@@ -1,4 +1,4 @@
-![Docker-Docker Containers.png](https://www.google.com/search?q=docker&tbm=isch&ved=2ahUKEwjl_P6q4ff1AhWZlP0HHT_NCAQQ2-cCegQIABAA&oq=docker&gs_lcp=CgNpbWcQAzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BAgAEEM6BAgAEB5Qg0lYg0lg7E1oAHAAeACAAVSIAegBkgEBM5gBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=LWUGYqWyN5mp9u8Pv5qjIA&bih=939&biw=1680&rlz=1C1GCEU_enBG958BG958#imgrc=eJWKdKQbAHJXiM)
+![Docker-Docker Containers.png](https://dataenginer.ru/wp-content/uploads/2019/10/docker.png)
 
 **Docker** — технология для создания и управления контейнерами.
 
@@ -251,9 +251,3 @@ pbcopy < ~/.ssh/id_rsa.pub
 `docker pull app`
 
 `docker run -d -p 80:3000 --name nodeapp --rm app`
-
-Переходим по адресу:
-
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8badc49e-3be1-4573-861f-f08c77ff8633/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8badc49e-3be1-4573-861f-f08c77ff8633/Untitled.png)
-
-Открываем в браузере IP
